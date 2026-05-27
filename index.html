@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ร้านข้าวออนไลน์พร้อมส่ง เมนูจานข้าวทำสดใหม่ สั่งง่าย เหมาะกับมื้อกลางวันและมื้อเย็น"
+    />
+    <title>ข้าวบ้านออนไลน์ | ร้านข้าวพร้อมส่ง</title>
+    <link rel="preload" href="assets/rice-shop-hero.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-elevated="false">
+      <a class="brand" href="#top" aria-label="ข้าวบ้านออนไลน์">
+        <span class="brand-mark">ข</span>
+        <span>
+          <strong>ข้าวบ้านออนไลน์</strong>
+          <small>ทำสด ส่งไว อิ่มคุ้ม</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="เมนูหลัก">
+        <a href="#menu">เมนู</a>
+        <a href="#order">สั่งอาหาร</a>
+        <a href="#delivery">จัดส่ง</a>
+        <a href="#contact">ติดต่อ</a>
+      </nav>
+      <a class="header-action" href="#order">สั่งเลย</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/rice-shop-hero.png" alt="อาหารจานข้าวไทยพร้อมส่งหลายเมนู" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">เปิดรับออเดอร์ทุกวัน 10:30-19:30</p>
+          <h1 id="hero-title">ข้าวบ้านออนไลน์</h1>
+          <p class="hero-copy">
+            อาหารจานข้าวทำสดใหม่ เมนูคุ้นเคย รสชาติจัดพอดี แพ็กสะอาด พร้อมส่งถึงบ้านและออฟฟิศในพื้นที่ใกล้เคียง
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#order">เลือกเมนู</a>
+            <a class="button secondary" href="#menu">ดูราคา</a>
+          </div>
+          <div class="hero-stats" aria-label="จุดเด่นร้าน">
+            <span><strong>5-8</strong> เมนูหลัก</span>
+            <span><strong>45+</strong> บาท</span>
+            <span><strong>2</strong> รอบส่ง</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="strip" aria-label="โปรเปิดร้าน">
+        <div>
+          <strong>โปรเปิดร้าน</strong>
+          <span>ลด 10 บาทสำหรับ 50 กล่องแรก หรือซื้อครบ 3 กล่องส่งฟรีในพื้นที่กำหนด</span>
+        </div>
+        <a href="#order">รับโปรนี้</a>
+      </section>
+
+      <section class="section menu-section" id="menu" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <p class="eyebrow">เมนูขายดี</p>
+          <h2 id="menu-title">เลือกเมนูง่าย ทำเร็ว คุมคุณภาพได้ทุกกล่อง</h2>
+        </div>
+        <div class="menu-grid" id="menuGrid"></div>
+      </section>
+
+      <section class="section order-section" id="order" aria-labelledby="order-title">
+        <div class="order-copy">
+          <p class="eyebrow">เริ่มสั่งอาหาร</p>
+          <h2 id="order-title">สร้างออเดอร์แล้วส่งให้ร้านได้ทันที</h2>
+          <p>
+            เลือกเมนู จำนวน ท็อปปิง และรอบรับอาหาร ระบบจะสรุปข้อความออเดอร์ให้พร้อมส่งในแชต
+          </p>
+          <div class="service-list">
+            <span>รับเอง</span>
+            <span>ส่งใกล้ร้าน</span>
+            <span>โอน/เงินสด</span>
+          </div>
+        </div>
+        <form class="order-panel" id="orderForm">
+          <label>
+            เมนู
+            <select id="dishSelect" name="dish"></select>
+          </label>
+          <div class="field-row">
+            <label>
+              จำนวน
+              <input id="quantityInput" name="quantity" type="number" min="1" max="20" value="1" />
+            </label>
+            <label>
+              ท็อปปิง
+              <select id="toppingSelect" name="topping">
+                <option value="0">ไม่เพิ่ม</option>
+                <option value="12">ไข่ดาว +12</option>
+                <option value="15">ไข่เจียว +15</option>
+                <option value="20">พิเศษข้าว +20</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            รอบรับอาหาร
+            <select id="timeSelect" name="time">
+              <option>รอบกลางวัน 10:30-13:30</option>
+              <option>รอบเย็น 16:30-19:30</option>
+              <option>นัดเวลาพิเศษ</option>
+            </select>
+          </label>
+          <label>
+            ชื่อ/เบอร์/ที่อยู่
+            <textarea id="customerInput" name="customer" rows="4" placeholder="เช่น คุณบาส 08x-xxx-xxxx ส่งที่..."></textarea>
+          </label>
+          <div class="total-box">
+            <span>ยอดอาหารโดยประมาณ</span>
+            <strong id="totalPrice">45 บาท</strong>
+          </div>
+          <button class="button primary full" type="button" id="copyOrder">คัดลอกข้อความออเดอร์</button>
+          <p class="order-message" id="orderMessage" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="section delivery-section" id="delivery" aria-labelledby="delivery-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">จัดส่งและรับเอง</p>
+          <h2 id="delivery-title">รอบขายชัดเจน อาหารถึงมือลูกค้าแบบยังน่ากิน</h2>
+        </div>
+        <div class="delivery-grid">
+          <article>
+            <span class="step">01</span>
+            <h3>รับออเดอร์</h3>
+            <p>ลูกค้าส่งเมนู จำนวน ที่อยู่ และเวลาที่ต้องการรับอาหาร</p>
+          </article>
+          <article>
+            <span class="step">02</span>
+            <h3>ทำสดตามรอบ</h3>
+            <p>เตรียมวัตถุดิบก่อนเปิดขายและทำอาหารตามคิวเพื่อคุมเวลา</p>
+          </article>
+          <article>
+            <span class="step">03</span>
+            <h3>แพ็กพร้อมส่ง</h3>
+            <p>กล่องสะอาด ปิดแน่น แยกเครื่องเคียง และแจ้งลูกค้าก่อนจัดส่ง</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">พร้อมเปิดขาย</p>
+          <h2 id="contact-title">ตั้งค่าช่องทางร้านแล้วเริ่มรับออเดอร์ได้เลย</h2>
+          <p>แก้ชื่อร้าน เบอร์โทร พื้นที่ส่ง และลิงก์ LINE/Facebook ในไฟล์เว็บให้ตรงกับร้านจริงก่อนเผยแพร่.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="#order">สั่งอาหาร</a>
+          <a class="button secondary light" href="tel:+66000000000">โทรหาร้าน</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>ข้าวบ้านออนไลน์</span>
+      <span>ทำสดใหม่ทุกออเดอร์</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
